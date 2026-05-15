@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita — Odontología Láser Bogotá | DoctorLáser</title>
+    <meta name="description" content="Agenda tu consulta de valoración con la Dra. Ana Vinasco. Respuesta el mismo día.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="icon" type="image/webp" href="/favicon.webp">
+</head>
+<body>
+    <nav id="main-nav" class="nav"></nav>
+
+    <main>
+        <section class="section">
+            <div class="container grid-2">
+                <div class="fade-up">
+                    <span class="eyebrow">Agenda tu cita</span>
+                    <h1>Da el primer paso hacia una odontología sin miedo</h1>
+                    <p>Completa el formulario y recibe confirmación por WhatsApp el mismo día.</p>
+                    
+                    <div class="card" style="margin-top: 2rem;">
+                        <h2>Información de la consulta</h2>
+                        <p><strong>Dirección:</strong> Cra. 7 Bis #124-56, Bogotá, Colombia</p>
+                        <p><strong>Teléfono:</strong> <a href="https://wa.me/573015666729">+57 301 5666729</a></p>
+                        <p><strong>Horarios:</strong> Lun–Vie 8:00 a.m. – 7:00 p.m. · Sáb 8:00 a.m. – 7:00 p.m.</p>
+                        <p><strong>Valor de la valoración:</strong> $50.000 COP (valor de referencia, confirmar en consulta)</p>
+                        <p><em>Contamos con parqueadero cercano. La consulta está ubicada en el barrio Chapinero, a 5 min de la estación de TransMilenio.</em></p>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <form id="agenda-form" class="agenda-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required pattern="[0-9+\s()-]{7,}">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="tratamiento">¿Qué tratamiento te interesa? *</label>
+                            <select id="tratamiento" name="tratamiento" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="Blanqueamiento dental con láser">Blanqueamiento dental con láser</option>
+                                <option value="Gingivoplastia (rediseño de encías)">Gingivoplastia (rediseño de encías)</option>
+                                <option value="Fotobiomodulación — PBM">Fotobiomodulación — PBM</option>
+                                <option value="Desensibilización dental">Desensibilización dental</option>
+                                <option value="Frenilectomía">Frenilectomía</option>
+                                <option value="Terapia para bruxismo">Terapia para bruxismo</option>
+                                <option value="Terapia para parálisis facial">Terapia para parálisis facial</option>
+                                <option value="Desinfección de conductos">Desinfección de conductos</option>
+                                <option value="Desinfección de bolsas periodontales">Desinfección de bolsas periodontales</option>
+                                <option value="No sé cuál necesito — quiero orientación">No sé cuál necesito — quiero orientación</option>
+                                <option value="Otro procedimiento">Otro procedimiento</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos tu caso brevemente</label>
+                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required>
+                                Acepto el tratamiento de mis datos personales para el proceso de agendamiento. Tus datos no serán compartidos con terceros.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--wa btn--lg">Enviar por WhatsApp</button>
+                        <p class="form-note">Tus datos son seguros. Solo los usamos para gestionar tu cita.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer"></footer>
+    <div id="wa-float"></div>
+    <script>
+        document.getElementById('agenda-form').addEventListener('submit', function(e) {
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                this.reportValidity();
+                return;
+            }
+            e.preventDefault();
+            var nombre = encodeURIComponent(document.getElementById('nombre').value);
+            var telefono = encodeURIComponent(document.getElementById('telefono').value);
+            var email = encodeURIComponent(document.getElementById('email').value || 'No proporcionado');
+            var tratamiento = encodeURIComponent(document.getElementById('tratamiento').value);
+            var mensaje = encodeURIComponent(document.getElementById('mensaje').value || 'Sin mensaje adicional');
+            
+            var waMsg = 'Hola, quiero agendar una cita.%0A%0A' +
+                        '*Nombre:* ' + nombre + '%0A' +
+                        '*Teléfono:* ' + telefono + '%0A' +
+                        '*Correo:* ' + email + '%0A' +
+                        '*Tratamiento:* ' + tratamiento + '%0A' +
+                        '*Mensaje:* ' + mensaje;
+            
+            window.open('https://wa.me/573015666729?text=' + waMsg, '_blank');
+        });
+    </script>
+    <script src="js/components.js"></script>
+</body>
+</html>
