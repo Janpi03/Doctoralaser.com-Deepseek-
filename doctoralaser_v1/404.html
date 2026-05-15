@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada | DoctorLáser — Dra. Ana Vinasco</title>
+  <meta name="description" content="La página que buscas no existe. Vuelve al inicio o agenda tu cita con la Dra. Ana Vinasco.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="icon" type="image/webp" href="/favicon.webp">
+  <style>
+    .error-page {
+      min-height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .error-page__code {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 20vw, 9rem);
+      font-weight: 700;
+      color: var(--c-p200);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.04em;
+    }
+    .error-page__icon {
+      font-size: 3rem;
+      color: var(--c-p500);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .error-page h1 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    .error-page p {
+      color: var(--c-n500);
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+    .error-page__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-page__links {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--c-n200);
+    }
+    .error-page__links h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--c-n500);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .error-page__links ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .error-page__links a {
+      font-weight: 500;
+      color: var(--c-p500);
+    }
+    .error-page__links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav id="main-nav" class="nav"></nav>
+
+  <main>
+    <section class="error-page">
+      <div>
+        <div class="error-page__code" aria-hidden="true">404</div>
+        <i class="ti ti-tooth error-page__icon" aria-hidden="true"></i>
+        <h1>Esta página no existe</h1>
+        <p>Puede que el enlace haya cambiado o que hayas llegado aquí por error. No hay problema, te ayudamos a encontrar lo que necesitas.</p>
+        <div class="error-page__actions">
+          <a href="index.html" class="btn btn--primary btn--lg">Ir al inicio</a>
+          <a href="agenda.html" class="btn btn--wa btn--lg">Agendar cita</a>
+        </div>
+        <div class="error-page__links">
+          <h2>Páginas principales</h2>
+          <ul>
+            <li><a href="beneficios.html">Beneficios del láser</a></li>
+            <li><a href="tratamientos.html">Tratamientos</a></li>
+            <li><a href="evidencia.html">Evidencia científica</a></li>
+            <li><a href="casos.html">Casos reales</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <div id="wa-float"></div>
+  <script src="js/components.js" defer></script>
+</body>
+</html>

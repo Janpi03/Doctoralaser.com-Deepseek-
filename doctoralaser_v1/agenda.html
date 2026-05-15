@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Cita — Odontología Láser Bogotá | DoctorLáser</title>
     <meta name="description" content="Agenda tu consulta de valoración con la Dra. Ana Vinasco. Respuesta el mismo día.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.doctoralaser.com/agenda.html">
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Doctor Láser">
+    <meta property="og:title"       content="Agendar Cita — Odontología Láser Bogotá | DoctorLáser">
+    <meta property="og:description" content="Agenda tu valoración con la Dra. Ana Vinasco. Confirmación por WhatsApp el mismo día. Chapinero, Bogotá.">
+    <meta property="og:url"         content="https://www.doctoralaser.com/agenda.html">
+    <meta property="og:image"       content="https://www.doctoralaser.com/og-image.webp">
+    <meta property="og:locale"      content="es_CO">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Agendar Cita — Odontología Láser Bogotá | DoctorLáser">
+    <meta name="twitter:description" content="Agenda tu valoración con la Dra. Ana Vinasco. Confirmación el mismo día.">
+    <meta name="twitter:image"       content="https://www.doctoralaser.com/og-image.webp">
+    <meta name="robots"              content="index, follow">
+    <meta name="theme-color"         content="#0d9488">
     <link rel="icon" type="image/webp" href="/favicon.webp">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
     <nav id="main-nav" class="nav"></nav>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container grid-2">
                 <div class="fade-up">
@@ -66,8 +82,8 @@
                             <textarea id="mensaje" name="mensaje" rows="4"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>
-                                <input type="checkbox" required>
+                            <label for="privacy-consent">
+                                <input type="checkbox" id="privacy-consent" name="privacy-consent" required aria-required="true">
                                 Acepto el tratamiento de mis datos personales para el proceso de agendamiento. Tus datos no serán compartidos con terceros.
                             </label>
                         </div>
@@ -81,7 +97,8 @@
 
     <footer id="main-footer"></footer>
     <div id="wa-float"></div>
-    <script>
+    <script src="js/components.js" defer></script>
+    <script defer>
         document.getElementById('agenda-form').addEventListener('submit', function(e) {
             if (!this.checkValidity()) {
                 e.preventDefault();

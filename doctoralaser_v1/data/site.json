@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "Doctor Láser",
+    "doctor": "Dra. Ana Vinasco",
+    "tagline": "Odontología láser en Bogotá",
+    "url": "https://www.doctoralaser.com",
+    "ogImage": "https://www.doctoralaser.com/og-image.webp",
+    "email": "info@doctoralaser.com",
+    "phone": "573015666729",
+    "phoneDisplay": "+57 301 5666729",
+    "whatsappUrl": "https://wa.me/573015666729"
+  },
+  "address": {
+    "street": "Cra. 7 Bis #124-56",
+    "neighborhood": "Chapinero",
+    "city": "Bogotá",
+    "department": "Bogotá D.C.",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "postalCode": "110221",
+    "lat": 4.6639,
+    "lng": -74.0554
+  },
+  "hours": {
+    "display": "Lun–Vie 8:00 a.m. – 7:00 p.m. · Sáb 8:00 a.m. – 7:00 p.m.",
+    "schema": [
+      { "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
+      { "dayOfWeek": ["Saturday"], "opens": "08:00", "closes": "19:00" }
+    ]
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/doctoralaser.co",
+    "facebook": "https://www.facebook.com/doctoralaser.co"
+  },
+  "nav": [
+    { "label": "Inicio",       "href": "index.html" },
+    { "label": "Beneficios",   "href": "beneficios.html" },
+    { "label": "Tratamientos", "href": "tratamientos.html" },
+    { "label": "Evidencia",    "href": "evidencia.html" },
+    { "label": "Casos",        "href": "casos.html" },
+    { "label": "Agenda",       "href": "agenda.html" }
+  ]
+}
